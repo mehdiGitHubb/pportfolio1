@@ -1,0 +1,59 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: rgb(48, 48, 48); /* Black background */
+    color: white; /* White text */
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    animation: zoomIn 0.5s forwards;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .close-modal-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(270deg,#DA7C25 0.36% ,#B923E1 102.06%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Zoom-in animation */
+  @keyframes zoomIn {
+    to {
+      transform: scale(1);
+    }
+  }
+  

@@ -1,0 +1,237 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.service-title{
+    position: relative;
+}
+.service-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.service-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.services-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 0.4s;
+    cursor: pointer; 
+}
+.services-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 80px;
+}
+.services-format h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+.services-format h2{
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(267deg,#DA7C25 0.36% ,#B923E1 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.services-format p{
+    color: #d4d4d4;
+    font-size: 24px;
+    line-height: 40px;
+    max-width: 300px;
+}
+.services-redmore{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+.services-format:hover{
+    border: 2px solid #B923E1;
+    background-image: linear-gradient(45deg,#3f0028,#582300);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+/* Modal overlay style */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.85); /* Darker overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensures modal is on top */
+  }
+  
+  /* Modal content style */
+/* Modal content style */
+/* Modal content style */
+.modal {
+    background-color: rgb(48, 48, 48); /* Black background */
+    color: #ffffff;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    display: flex; /* Using flex for layout */
+    flex-direction: column; /* Stacking elements vertically */
+  }
+  
+  /* Header styling for service number and name */
+  .modal-header {
+    display: flex;
+    flex-direction: column; /* Stack the header items vertically */
+    margin-bottom: 20px; /* Space below the header */
+  }
+  
+  /* Styling for h3 (Service number) */
+  .modal h3 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left; /* Align to the left */
+  }
+  
+  /* Styling for h2 (Service name) */
+  .modal h2 {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left; /* Align to the left */
+  }
+  
+  /* Close button style */
+  .modal-close-btn {
+    margin-top: 20px;  /* Space above the button */
+    padding: 10px 20px; /* Padding inside the button */
+    background: linear-gradient(270deg, #DA7C25 0.36%, #B923E1 102.06%); /* Gradient background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Make the button a block element */
+    width: fit-content; /* Adjust width based on content */
+    margin-left: auto; /* Center the button */
+    margin-right: auto; /* Center the button */
+}
+
+
+@media (max-width: 1068px) {
+    .services{
+        gap: 40px;
+        margin: 10px 30px;
+        align-items: start;
+    }
+    .service-title h1{
+        font-size: 60px;
+        padding: 0;
+    }
+    .service-title img{
+        width: 130px;
+        right: -20px;
+    }
+    .services-format{
+        gap: 20px;
+        padding: 30px;
+    }
+    .services-format h2{
+        font-size: 30px;
+    }
+    .services-format p{
+        font-size: 20px;
+        line-height: 22px;
+        max-width: 200px;
+
+    }
+    .services-redmore{
+
+        gap: 10px;
+   
+    }
+    .services-redmore img{
+        width: 20px;
+    }
+    .services-container {
+        grid-template-columns: 1fr 1fr 1fr ; /* Single column layout on mobile */
+        padding: 0 15px; /* Adjust padding for mobile */
+        gap: 20px; /* More gap for better spacing */
+    }
+
+}
+
+  
+  
+@media (max-width: 468px) {
+    .services{
+        gap: 40px;
+        margin: 10px 30px;
+        align-items: start;
+    }
+    .service-title h1{
+        font-size: 40px;
+        padding: 0;
+    }
+    .service-title img{
+        width: 130px;
+        right: -20px;
+    }
+    .services-format{
+        gap: 20px;
+        padding: 30px;
+    }
+    .services-format h2{
+        font-size: 20px;
+    }
+    .services-format p{
+        font-size: 15px;
+        line-height: 22px;
+        max-width: 200px;
+
+    }
+    .services-redmore{
+
+        gap: 10px;
+   
+    }
+    .services-redmore img{
+        width: 20px;
+    }
+    .services-container {
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+        flex-direction: row; /* Switch to row layout for tablet */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: center; /* Center items horizontally in the row */
+        padding: 0 40px; /* Add padding for tablet */
+        gap: 15px; /* Adjust gap for tablet */
+    }
+    .modal {
+        padding: 40px;
+        max-width: 600px;
+        width: 70%;
+   
+      }
+}
